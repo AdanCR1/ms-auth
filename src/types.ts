@@ -1,0 +1,22 @@
+import type { Context } from 'hono';
+
+export type UserRole = 'superadmin' | 'revisor' | 'investigador' | 'auxiliar';
+
+export interface Env {
+  SUPABASE_URL: string;
+  SUPABASE_ANON_KEY: string;
+  SUPABASE_SERVICE_ROLE_KEY: string;
+  JWT_SIGNING_KEY: string;
+  INTERNAL_SERVICE_SECRET: string;
+}
+
+export interface Variables {
+  user: {
+    id: string;
+    email: string;
+    nombre: string;
+    rol: UserRole;
+  };
+}
+
+export type AppContext = Context<{ Bindings: Env; Variables: Variables }>;

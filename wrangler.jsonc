@@ -2,13 +2,15 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ms-auth",
   "main": "src/index.ts",
-  "compatibility_date": "2026-09-15"
+  "compatibility_date": "2026-09-15",
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
-  // "vars": {
-  //   "MY_VAR": "my-variable"
-  // },
+  // ...
+  "vars": {
+    "SUPABASE_URL": "https://ffbichsuatveqcpiulvh.supabase.co"
+  }
+  // ...
   // "kv_namespaces": [
   //   {
   //     "binding": "MY_KV_NAMESPACE",
